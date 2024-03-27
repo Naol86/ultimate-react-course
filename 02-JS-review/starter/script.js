@@ -1,3 +1,5 @@
+// "use strict";
+/*
 const data = [
     {
         id: 1,
@@ -146,3 +148,48 @@ function getBook(id) {
 // destructuring the object
 let books = getBooks();
 console.log(books);
+
+let pagesOfBooks = books.reduce((acc, book) => acc + book.pages, 0);
+console.log(pagesOfBooks);
+
+let booksWith = books.filter((book) => book.pages > 700);
+console.log(booksWith);
+
+let booksTitle = books.map((book) => book.title);
+console.log(booksTitle);
+
+const num = [
+    [2, 7],
+    [5, 4],
+    [6, 5],
+];
+const sorted = num.slice().sort((a, b) => a[1] - b[1]);
+console.log(num);
+console.log(sorted);
+*/
+
+// const response = async () => {
+//     const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+//     const data = res.json();
+//     return data;
+// };
+
+// console.log(response());
+// console.log("naol");
+
+// console.log(
+//     fetch("https://jsonplaceholder.typicode.com/todos")
+//         .then((response) => response.json())
+//         .then((data) => console.log(data))
+// );
+// response();
+
+const response = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const data = res.json();
+    return data;
+};
+console.log("hello");
+let data = response();
+data;
+console.log("hello");

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 function App() {
     const [advice, setAdvice] = useState("");
+
     const getAdvice = async () => {
         const response = await fetch("https://api.adviceslip.com/advice");
         const data = await response.json();
@@ -10,12 +11,15 @@ function App() {
 
     return (
         <div>
-            <h1>hello world</h1>
-            <p>here we code</p>
-            <button onClick={getAdvice}>get advice</button>
-            <p>{advice}</p>
+            <h1>hello world 2</h1>
+            <button onClick={getAdvice}>new advice</button>
+            <DisplayMessage message={advice} />
         </div>
     );
+}
+
+function DisplayMessage(props) {
+    return <div>{props.message}</div>;
 }
 
 export default App;
