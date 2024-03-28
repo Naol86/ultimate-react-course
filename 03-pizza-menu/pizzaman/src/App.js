@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 
 const pizzaData = [
     {
@@ -47,21 +48,49 @@ const pizzaData = [
 
 function App() {
     return (
-        <div>
-            <h1>hello world</h1>
-            <Pizza />
-            <Pizza />
+        <div className="container">
+            <Header />
+            <Menu />
+            <Footer />
         </div>
     );
 }
 
-function Pizza() {
+function Pizza(props) {
     return (
-        <div>
-            <img src="pizzas/focaccia.jpg" alt="Focaccia Pizza" />
-            <h2>Focaccia Pizza</h2>
-            <p>Bread with italian olive oil and rosemary</p>
+        <li className="pizza">
+            <img src={props.pizza.photoName} alt={props.pizza.name} />
+            <h3>{props.pizza.name} Pizza</h3>
+            <p>{props.pizza.ingredients}</p>
+            <p>{props.pizza.price + 2}</p>
+        </li>
+    );
+}
+
+function Header() {
+    return (
+        <header className="header">
+            <h1>Fast React Pizza Co.</h1>
+        </header>
+    );
+}
+function Menu() {
+    return (
+        <div className="menu">
+            <h2>our Menu</h2>
+            <ul className="pizzas">
+                {pizzaData.map((pizza) => (
+                    <Pizza pizza={pizza} key={pizza.name} />
+                ))}
+            </ul>
         </div>
+    );
+}
+function Footer() {
+    return (
+        <footer className="footer">
+            {new Date().toLocaleTimeString()} we'r currently open
+        </footer>
     );
 }
 

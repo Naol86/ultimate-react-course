@@ -1,0 +1,14 @@
+.card {
+    width: 18rem;
+    max-height: 400px;
+    /* background-color: red; */
+}
+
+.card-img-top {
+    max-height: 240px;
+    object-fit: cover;
+}
+
+.btn {
+    margin: 2px;
+}
