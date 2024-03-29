@@ -57,8 +57,9 @@ function App() {
 }
 
 function Pizza(props) {
+    let soldOut = props.pizza.soldOut ? "pizza sold-out" : "pizza";
     return (
-        <li className="pizza">
+        <li className={soldOut}>
             <img src={props.pizza.photoName} alt={props.pizza.name} />
             <h3>{props.pizza.name} Pizza</h3>
             <p>{props.pizza.ingredients}</p>
@@ -87,9 +88,20 @@ function Menu() {
     );
 }
 function Footer() {
+    let time = new Date().getHours();
+    let open = 8;
+    let close = 22;
+    const isOpen = open <= time && time <= close;
+    console.log(isOpen);
     return (
         <footer className="footer">
-            {new Date().toLocaleTimeString()} we'r currently open
+            {isOpen && (
+                <div className="order">
+                    <p>we are open</p>
+                    <button className="btn">order</button>
+                </div>
+            )}
+            {isOpen || <p>we are closed</p>}
         </footer>
     );
 }
