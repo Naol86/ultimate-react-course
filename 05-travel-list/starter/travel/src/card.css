@@ -1,0 +1,23 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: rgb(77, 76, 76); */
+}
+
+.card {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* width: 300px; */
+  /* max-width: 400px; */
+  /* height: 200px; */
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  background-color: rgb(77, 76, 76);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 13px 10px rgba(54, 0, 0, 0.3);
+}
