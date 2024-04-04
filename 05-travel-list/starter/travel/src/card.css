@@ -7,17 +7,23 @@
 }
 
 .card {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* width: 300px; */
-  /* max-width: 400px; */
-  /* height: 200px; */
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  max-width: 400px;
+  height: 200px;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: 800;
-  background-color: rgb(77, 76, 76);
+  background-color: rgb(168, 168, 168);
   border: none;
   border-radius: 20px;
   box-shadow: 0 0 13px 10px rgba(54, 0, 0, 0.3);
+  transition: background-color 0.7s ease, color 1s ease;
+}
+
+.answer {
+  background-color: rgb(114, 0, 0);
+  color: white;
 }
