@@ -1,17 +1,17 @@
 .body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /* background-color: rgb(77, 76, 76); */
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  max-width: 400px;
+  /* width: 300px; */
+  max-width: 350px;
+  min-width: 270px;
   height: 200px;
   color: rgb(0, 0, 0);
   font-size: 20px;
@@ -20,7 +20,7 @@
   border: none;
   border-radius: 20px;
   box-shadow: 0 0 13px 10px rgba(54, 0, 0, 0.3);
-  transition: background-color 0.7s ease, color 1s ease;
+  transition: background-color 1.3s ease, color 1.5s ease;
 }
 
 .answer {

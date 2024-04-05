@@ -1,3 +1,6 @@
+import "./Card.css";
+import { useState } from "react";
+
 const questions = [
   {
     id: 3457,
@@ -41,10 +44,24 @@ export default function Card() {
 }
 
 function Questions() {
+  const [currentQuestion, setCurrentQuestion] = useState(null);
+
+  const handleClick = (id) => {
+    setCurrentQuestion(id);
+  };
+
   return (
-    <div>
+    <div className="body">
       {questions.map((question) => (
-        <div key={question.id}>{question.question}</div>
+        <div
+          key={question.id}
+          className={currentQuestion === question.id ? "card answer" : "card"}
+          onClick={() => handleClick(question.id)}
+        >
+          {currentQuestion === question.id
+            ? question.answer
+            : question.question}
+        </div>
       ))}
     </div>
   );
