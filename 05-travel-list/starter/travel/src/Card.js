@@ -47,7 +47,11 @@ function Questions() {
   const [currentQuestion, setCurrentQuestion] = useState(null);
 
   const handleClick = (id) => {
-    setCurrentQuestion(id);
+    if (currentQuestion === id) {
+      setCurrentQuestion(null);
+    } else {
+      setCurrentQuestion(id);
+    }
   };
 
   return (

@@ -1,8 +1,11 @@
 .body {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 15px; */
+  display: grid;
+  grid-template-rows: repeat(4, 300px);
+  grid-template-columns: repeat(auto, minmax(200px, 400px));
 }
 
 .card {
